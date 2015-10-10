@@ -15,11 +15,11 @@ setPrototype.add = function(item){
 };
 
 setPrototype.contains = function(item){
-  return this.find(item) > -1;
+  return this._find(item) > -1;
 };
 
 setPrototype.remove = function(item){
-  var index = this.find(item);
+  var index = this._find(item);
   if (index > -1) {
     this._storage.splice(index, 1);
     return 0;
@@ -27,9 +27,12 @@ setPrototype.remove = function(item){
   return -1;
 };
 
-setPrototype.find = function(item){
+setPrototype._find = function(item){
   return this._storage.indexOf(item);
 }
 /*
  * Complexity: What is the time complexity of the above functions?
+ * add: linear
+ * contains: linear
+ * remove: linear
  */
