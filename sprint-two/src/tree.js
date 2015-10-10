@@ -8,10 +8,6 @@ var Tree = function(value){
   return newTree;
 };
 
-
-
-
-
 var treeMethods = {};
 
 treeMethods.addChild = function(value){
@@ -35,4 +31,6 @@ treeMethods.contains = function(target, node){
 
 /*
  * Complexity: What is the time complexity of the above functions?
+ * addChild: constant
+ * contains: logarithmic
  */
