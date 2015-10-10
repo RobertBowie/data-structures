@@ -1,6 +1,5 @@
 var HashTable = function(){
   this._limit = 8;
-  this._threshold = .75;
   this._storage = LimitedArray(this._limit);
 };
 
